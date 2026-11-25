@@ -1,0 +1,7 @@
+install conda specific packages using conda.
+
+install azureml package with "pip"
+    pip install azureml-automl-runtime==1.58
+
+run flask app after changing the directory to RKM folder
+    python app.py

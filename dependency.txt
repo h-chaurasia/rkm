@@ -1,0 +1,10 @@
+conda-
+    python==3.9.20
+    pickle
+    plotly
+    flask
+    pandas
+    numpy
+
+pip-
+    azureml-automl-runtime==1.58.0

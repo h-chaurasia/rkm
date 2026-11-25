@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block head %}
+
+<link rel = "stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
+<script src="{{  url_for('static', filename='js/out.js')  }}"></script>
+{% endblock %}
+{% block body %}
+<div id = "id_2"></div>
+</br>
+	<a href="{{  url_for('static', filename=fname)  }}" download="output"><h3 align="center">Download the Result Here<h3></a>
+  <h2 >Result</h2>
+    <div class="table-responsive">        
+  <table id="forPage" class="table table-striped table-bordered table-hover table-light">
+    <thead class="thead-dark">
+      <tr>
+        <th>UHML</th>
+        <th>Uniformity Index</th>
+        <th>Mic</th>
+        <th>Strength</th>
+		<th>Elongation</th>
+		<th>Count</th>
+		<th>Tenacity</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for i in result %}
+        <tr>
+            <td>{{ i[0] }}</td>
+            <td><div>{{ i[1] }}</div></td>
+            <td><div>{{ i[2] }}</div></td>
+            <td><div>{{ i[3] }}</div></td>
+            <td><div>{{ i[4] }}</div></td>
+            <td><div>{{ i[5] }}</div></td>
+            <td><div>{{ i[6] }}</div></td>
+          </tr>
+          {% endfor %}
+    </tbody>
+  </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+.aside{
+    width:25%;
+    height:360px;
+    margin-top:16px;
+    float:left;
+    background: #f0f0f5;
+    border:groove;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    color:brown;
+}
+.aside a{
+    text-decoration:none;
+    color:#003366;
+}
+a.asidelist:hover, a.asidelist:active {
+    color:#ff0066;
+}
+.section{
+    width:100%;
+    float:right;
+    height:360px;
+    margin-top:16px;
+    background: #f5e6ff;
+    border:groove;
+}
+.foot{
+    color:#000; 
+    font-family: verdana;
+    text-align:center;
+    font-size:12px;
+    height:80px;
+}
+.verticalLine {
+    border-right: thin solid #003;
+}
+.content {
+    max-width: 1000px;
+    margin: auto;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+}
+.dropbtn:hover {
+    opacity: 0.8;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+.container {
+    padding: 16px;
+}
+.display_none {
+	display: none;
+}
+div.scroll {
+    margin: 4px, 4px;
+    padding: 4px;
+    
+    width: 170px;
+    overflow: auto;
+    white-space: nowrap;
+}
+div.scroll_1 {
+    margin: 4px, 4px;
+    padding: 4px;
+    
+    width: 60px;
+    overflow: auto;
+    white-space: nowrap;
+}
