@@ -45,6 +45,6 @@ fiber properties, or upload a CSV of many samples at once.
 """
 )
 
-st.page_link("pages/1_Prediction.py", label="Go to Prediction →", icon="🔮")
+st.page_link("pages/1_Prediction.py", label="Go to Prediction →")
 
 render_footer()
