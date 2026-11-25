@@ -17,6 +17,7 @@ from common import APP_TITLE, render_footer, render_header
 
 FEATURE_COLUMNS = ["UHML", "UI", "Mic", "Str", "E", "Count"]
 MODEL_PATH = "rkm_model_lite.joblib"
+COUNT_OPTIONS = [12, 16, 20, 24, 30, 32, 36, 40, 50, 60, 70, 80, 90, 100]
 
 st.set_page_config(page_title=f"Prediction | {APP_TITLE}", page_icon="static/images/icar_1.png", layout="wide")
 
@@ -50,28 +51,32 @@ with tab_single:
         with c1:
             uhml = st.number_input(
                 f"Upper Half Mean Length (mm) [{21.8} – {35.4}]",
-                min_value=21.8, max_value=35.4, format="%.4f",
+                min_value=21.8, max_value=35.4, value=round((21.8 + 35.4) / 2, 1),
+                step=0.1, format="%.1f",
             )
             mic = st.number_input(
                 f"Micronaire (microgm/inch) [{2.9} – {6.8}]",
-                min_value=2.9, max_value=6.8, format="%.4f",
+                min_value=2.9, max_value=6.8, value=round((2.9 + 6.8) / 2, 1),
+                step=0.1, format="%.1f",
             )
             e = st.number_input(
                 f"Elongation (%) [{5.2} – {6.8}]",
-                min_value=5.2, max_value=6.8, format="%.4f",
+                min_value=5.2, max_value=6.8, value=round((5.2 + 6.8) / 2, 1),
+                step=0.1, format="%.1f",
             )
         with c2:
             ui = st.number_input(
                 f"Uniformity Index (%) [{76.0} – {87.2}]",
-                min_value=76.0, max_value=87.2, format="%.4f",
+                min_value=76.0, max_value=87.2, value=round((76.0 + 87.2) / 2, 1),
+                step=0.1, format="%.1f",
             )
             strength = st.number_input(
                 f"Fibre Strength (g/tex) [{21.3} – {41.2}]",
-                min_value=21.3, max_value=41.2, format="%.4f",
+                min_value=21.3, max_value=41.2, value=round((21.3 + 41.2) / 2, 1),
+                step=0.1, format="%.1f",
             )
-            count = st.number_input(
-                f"Yarn Count (Ne) [12 – 100]",
-                min_value=12, max_value=100, step=1,
+            count = st.selectbox(
+                "Yarn Count (Ne)", COUNT_OPTIONS, index=len(COUNT_OPTIONS) // 2,
             )
         submitted = st.form_submit_button("Submit")
 
