@@ -6,7 +6,7 @@ ICAR_LOGO = "static/images/icar_1.png"
 
 
 def render_header():
-    col_logo, col_title = st.columns([1, 5])
+    col_logo, col_title = st.columns([1, 7])
     with col_logo:
         st.image(ICAR_LOGO, width=90)
     with col_title:
