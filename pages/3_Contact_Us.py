@@ -2,7 +2,7 @@ import streamlit as st
 
 from common import APP_TITLE, render_footer, render_header
 
-st.set_page_config(page_title=f"Contact Us | {APP_TITLE}", page_icon="static/images/icar_1.png", layout="centered")
+st.set_page_config(page_title=f"Contact Us | {APP_TITLE}", page_icon="static/images/icar_1.png", layout="wide")
 
 render_header()
 
