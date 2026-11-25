@@ -18,7 +18,7 @@ from common import APP_TITLE, render_footer, render_header
 FEATURE_COLUMNS = ["UHML", "UI", "Mic", "Str", "E", "Count"]
 MODEL_PATH = "rkm_model_lite.joblib"
 
-st.set_page_config(page_title=f"Prediction | {APP_TITLE}", page_icon="static/images/icar_1.png", layout="centered")
+st.set_page_config(page_title=f"Prediction | {APP_TITLE}", page_icon="static/images/icar_1.png", layout="wide")
 
 
 @st.cache_resource
@@ -49,23 +49,29 @@ with tab_single:
         c1, c2 = st.columns(2)
         with c1:
             uhml = st.number_input(
-                "UHML (mm)", min_value=21.8, max_value=35.4, value=27.15, format="%.4f"
+                f"Upper Half Mean Length (mm) [{21.8} – {35.4}]",
+                min_value=21.8, max_value=35.4, format="%.4f",
             )
             mic = st.number_input(
-                "Mic", min_value=2.9, max_value=6.8, value=4.20, format="%.4f"
+                f"Micronaire (microgm/inch) [{2.9} – {6.8}]",
+                min_value=2.9, max_value=6.8, format="%.4f",
             )
             e = st.number_input(
-                "E (%)", min_value=5.2, max_value=6.8, value=5.64, format="%.4f"
+                f"Elongation (%) [{5.2} – {6.8}]",
+                min_value=5.2, max_value=6.8, format="%.4f",
             )
         with c2:
             ui = st.number_input(
-                "UI", min_value=76.0, max_value=87.2, value=82.83, format="%.4f"
+                f"Uniformity Index (%) [{76.0} – {87.2}]",
+                min_value=76.0, max_value=87.2, format="%.4f",
             )
             strength = st.number_input(
-                "Str (g/tex)", min_value=21.3, max_value=41.2, value=27.36, format="%.4f"
+                f"Fibre Strength (g/tex) [{21.3} – {41.2}]",
+                min_value=21.3, max_value=41.2, format="%.4f",
             )
             count = st.number_input(
-                "Count", min_value=12.0, max_value=100.0, value=34.90, format="%.4f"
+                f"Yarn Count (Ne) [12 – 100]",
+                min_value=12, max_value=100, step=1,
             )
         submitted = st.form_submit_button("Submit")
 
