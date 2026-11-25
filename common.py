@@ -10,7 +10,7 @@ def render_header():
     with col_logo:
         st.image(ICAR_LOGO, width=90)
     with col_title:
-        st.markdown(f"<h1 style='margin-top:0;'>{APP_TITLE}</h1>", unsafe_allow_html=True)
+        st.markdown(f"<h1 style='margin-top:0; text-align:center;'>{APP_TITLE}</h1>", unsafe_allow_html=True)
     st.divider()
 
 
