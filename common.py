@@ -1,7 +1,7 @@
 """Shared header/footer and constants used across every page."""
 import streamlit as st
 
-APP_TITLE = "Machine Learning based Yarn Tenacity Predictor"
+APP_TITLE = "RKMPred: Machine Learning based Yarn Tenacity Predictor"
 ICAR_LOGO = "static/images/icar_1.png"
 
 
