@@ -48,13 +48,25 @@ with tab_single:
     with st.form("single_entry_form"):
         c1, c2 = st.columns(2)
         with c1:
-            uhml = st.number_input("UHML", value=0.0, format="%.4f")
-            mic = st.number_input("Mic", value=0.0, format="%.4f")
-            e = st.number_input("E", value=0.0, format="%.4f")
+            uhml = st.number_input(
+                "UHML (mm)", min_value=21.8, max_value=35.4, value=27.15, format="%.4f"
+            )
+            mic = st.number_input(
+                "Mic", min_value=2.9, max_value=6.8, value=4.20, format="%.4f"
+            )
+            e = st.number_input(
+                "E (%)", min_value=5.2, max_value=6.8, value=5.64, format="%.4f"
+            )
         with c2:
-            ui = st.number_input("UI", value=0.0, format="%.4f")
-            strength = st.number_input("Str", value=0.0, format="%.4f")
-            count = st.number_input("Count", value=0.0, format="%.4f")
+            ui = st.number_input(
+                "UI", min_value=76.0, max_value=87.2, value=82.83, format="%.4f"
+            )
+            strength = st.number_input(
+                "Str (g/tex)", min_value=21.3, max_value=41.2, value=27.36, format="%.4f"
+            )
+            count = st.number_input(
+                "Count", min_value=12.0, max_value=100.0, value=34.90, format="%.4f"
+            )
         submitted = st.form_submit_button("Submit")
 
     if submitted:
