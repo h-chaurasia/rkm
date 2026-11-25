@@ -18,7 +18,7 @@ from common import APP_TITLE, render_footer, render_header
 FEATURE_COLUMNS = ["UHML", "UI", "Mic", "Str", "E", "Count"]
 MODEL_PATH = "rkm_model_lite.joblib"
 
-st.set_page_config(page_title=f"Prediction | {APP_TITLE}", page_icon="static/images/icar_1.png", layout="centered")
+st.set_page_config(page_title=f"Prediction | {APP_TITLE}", page_icon="static/images/icar_1.png", layout="wide")
 
 
 @st.cache_resource
